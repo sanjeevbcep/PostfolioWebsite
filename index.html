@@ -14,15 +14,25 @@
 
     <!-- font awesome used here for icons -->
     <script src="https://kit.fontawesome.com/ed746c333e.js" crossorigin="anonymous"></script>
+    <!-- for typing effect -->
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
+
+    <!-- scroll up -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa-solid fa-up-long"></i>
+    </button>
+
     <div id="header">
         <!-- navigation bar -->
         <div class="container">
             <!-- The <nav> tag defines a set of navigation links. -->
-            <nav>
-                <img src="./images/logo.png" alt="logo">
+            <nav class="nav-bar">
+                <!-- <img src="./images/logo.png" alt="logo"> -->
+                <div class="logo1">Portfo<span>lio.</span></div>
 
                 <!-- list of menues -->
                 <ul id="sidemenu">
@@ -43,10 +53,12 @@
 
             <!-- for header text -->
             <div class="header-text">
-                <p>Programmer</p>
+                <!-- <p>Programmer</p> -->
                 <!-- br isliye kyuki kafi bada ja rhaa tha -->
                 <!-- span for changing color -->
-                <h1>Hi, I'm <span>Arin</span><br> Agarwal from India</h1>
+                <h1>Hi, I'm <br><span>Arin Agarwal</span><br></h1>
+                <div class="text">And I'm a <span class="auto"></span></div>
+                <button class="btn btn2 btn3"><a href="#about">Know more About Me</a></button>
             </div>
         </div>
     </div>
