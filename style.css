@@ -484,6 +484,20 @@ nav .media{
     display: block;
 }
 
+/* instead of image we used name here */
+.logo1{
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.text{
+    font-size: 40px;
+}
+
+.auto{
+    color: #61b752;
+}
+
 @media only screen and (max-width: 600px) {
     /* changing background */
     #header{
@@ -568,10 +582,4 @@ nav .media{
     .copyright{
         font-size: 14px;
     }
-}
-
-/* instead of image we used name here */
-.logo1{
-    font-size: 70px;
-    font-weight: 600;
 }
