@@ -60,7 +60,8 @@ nav ul li{
 nav ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 20px;
     position: relative;
 }
 
@@ -567,4 +568,10 @@ nav .media{
     .copyright{
         font-size: 14px;
     }
+}
+
+/* instead of image we used name here */
+.logo1{
+    font-size: 70px;
+    font-weight: 600;
 }
