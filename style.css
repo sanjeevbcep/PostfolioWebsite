@@ -143,7 +143,7 @@ nav ul li a:hover{
 /* added by me */
 .aboutme{
     font-size: 18px;
-    /* margin-top: 10%; */
+    margin-top: 10%;
 }
 
 /* about me ke liye text wala heading */
@@ -658,5 +658,13 @@ nav .media{
 
     .aboutme{
         margin-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .aboutme{
+        margin-top: 20px;
+        font-size: 15px;
     }
 }
