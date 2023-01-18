@@ -43,7 +43,8 @@ nav{
     flex-wrap: wrap;
     position: fixed;
     z-index: 9999;
-    width: 80%;
+    width: 85%;
+    background-color: #080808;
 }
 
 /* for logo */
