@@ -84,7 +84,6 @@ nav ul li a::after{
 /* hover karne pe he after chale */
 nav ul li a:hover::after{
     width: 100%;
-
 }
 
 nav ul li a:hover{
@@ -510,6 +509,10 @@ nav .media{
     font-size: 20px;
 }
 
+.btn.btn2.btn3:hover{
+    opacity: 0.8;
+}
+
 /* scroll up */
 /* 
 .scroll{
@@ -555,7 +558,7 @@ nav .media{
 @media only screen and (max-width: 600px) {
     /* changing background */
     #header{
-        background-image: url(/images/phone-background.png);
+        background-image: url(./images/phone-background.png);
     }
     /* decreaing size in main section */
     .header-text{
