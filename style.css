@@ -21,7 +21,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(./images/background.png);
+    background-image: url(./images/portfolio_theme.png);
     /* cover kya karti h pura cover kar legi uss div vagera ko */
     background-size: cover;
     background-position: center;
@@ -559,9 +559,9 @@ nav .media{
 /* --------------media queries -------------------- */
 @media only screen and (max-width: 600px) {
     /* changing background */
-    #header{
+    /* #header{
         background-image: url(./images/phone-background.png);
-    }
+    } */
     /* decreaing size in main section */
     .header-text{
         margin-top: 100%;
