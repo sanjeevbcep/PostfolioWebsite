@@ -138,7 +138,12 @@ nav ul li a:hover{
 
 .about-col-2{
     flex-basis: 60%;
-    font-size: 20px;
+}
+
+/* added by me */
+.aboutme{
+    font-size: 18px;
+    margin-top: 15px;
 }
 
 /* about me ke liye text wala heading */
