@@ -352,6 +352,10 @@ nav ul li a:hover{
     text-align: center;
 }
 
+.layer a:hover{
+    background-color: #61b752;
+}
+
 /* by default hide honge aur click hone pe show honge content */
 .work:hover img{
     /* jabh bhe hover kare img mai size increase ho */
