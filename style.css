@@ -41,6 +41,9 @@ nav{
     justify-content: space-between;
     /* overflow rokne ke liye ha ye aagar width vagera hio jaye change apni */
     flex-wrap: wrap;
+    position: fixed;
+    z-index: 9999;
+    width: 80%;
 }
 
 /* for logo */
