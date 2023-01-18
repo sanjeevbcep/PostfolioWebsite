@@ -339,7 +339,8 @@ nav ul li a:hover{
 
 /* styling link in this */
 .layer a{
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin-top: 30px;
     color: #ff004f;
     text-decoration: none;
     font-size: 18px;
@@ -353,7 +354,7 @@ nav ul li a:hover{
 }
 
 .layer a:hover{
-    background-color: #61b752;
+    background-color:#080808;
 }
 
 /* by default hide honge aur click hone pe show honge content */
