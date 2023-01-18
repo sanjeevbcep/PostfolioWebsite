@@ -353,7 +353,6 @@ nav ul li a:hover{
 }
 
 /* by default hide honge aur click hone pe show honge content */
-
 .work:hover img{
     /* jabh bhe hover kare img mai size increase ho */
     transform: scale(1.1);
