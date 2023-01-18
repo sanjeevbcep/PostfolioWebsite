@@ -503,11 +503,14 @@ nav .media{
     color: #61b752;
 }
 
+.btn.btn2.btn3{
+    cursor: pointer;
+}
+
 .btn.btn2.btn3 a{
     text-decoration: none;
     color: #fff;
     font-size: 20px;
-    cursor: pointer;
 }
 
 .btn.btn2.btn3:hover{
