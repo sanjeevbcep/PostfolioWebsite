@@ -138,6 +138,7 @@ nav ul li a:hover{
 
 .about-col-2{
     flex-basis: 60%;
+    font-size: 20px;
 }
 
 /* about me ke liye text wala heading */
