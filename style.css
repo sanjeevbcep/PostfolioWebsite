@@ -352,21 +352,6 @@ nav ul li a:hover{
     text-align: center;
 }
 
-
-.ab{
-    margin-top: 20px;
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    /* space between lines */
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-
 /* by default hide honge aur click hone pe show honge content */
 
 .work:hover img{
