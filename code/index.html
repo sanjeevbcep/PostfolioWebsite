@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <!-- include css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- font awesome used here for icons -->
+    <script src="https://kit.fontawesome.com/ed746c333e.js" crossorigin="anonymous"></script>
+    <!-- for typing effect -->
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- for icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="./images/3988124.ico">
+</head>
+
+<body>
+
+    <!-- scroll up -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa-solid fa-up-long"></i>
+    </button>
+
+    <div id="header">
+        <!-- navigation bar -->
+        <div class="container">
+            <!-- The <nav> tag defines a set of navigation links. -->
+            <nav class="nav-bar">
+                <!-- <img src="./images/logo.png" alt="logo"> -->
+                <div class="logo1">&lt Sanjeev<span> /></span></div>
+
+                <!-- list of menues -->
+                <ul id="sidemenu">
+                    <!-- href # to link to the top of the current page -->
+                    <!-- idhar id daalni h isliye id de thi sabhki hamne -->
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Education</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- icon cross -->
+                    <!-- onclick added here for clicking purpose of menues -->
+                    <i class="fa-solid fa-xmark media" onclick="closeMenu()"></i>
+                </ul>
+                <!-- icon added menu-->
+                <i class="fa-solid fa-bars media" onclick="openMenu()"></i>
+            </nav>
+
+            <!-- for header text -->
+            <div class="header-text">
+                <!-- <p>Programmer</p> -->
+                <!-- br isliye kyuki kafi bada ja rhaa tha -->
+                <!-- span for changing color -->
+                <h1>Hi, I'm <br><span>Sanjeev Kumar</span><br></h1>
+                <div class="text">And I'm a <span class="auto"></span></div>
+                <button class="btn btn2 btn3"><a href="#about">Know more About Me</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!------------- for about ------------------>
+    <div id="about">
+        <div class="container">
+            <!-- we need to create two coloums -->
+            <!-- left col image right col text -->
+            <div class="row">
+                <!-- image -->
+                <div class="about-col-1">
+                    <img src="images\PROFILE PHOTO.png" alt="user">
+                </div>
+
+                <!-- content -->
+                <div class="about-col-2">
+                    <h1 class= "subtitle">
+                        About Me
+                    </h1>
+
+                    <!-- text now -->
+                    <p class="aboutme">
+                        Hi! I am Sanjeev Kumar and I am a Third year B.Tech. Student at the Bakhtiyarput College of Engineering, Patna(Bihar), majoring in Computer Science and Engineering. My broad interests are in the Machine Learning, Artifical Intelligence (AI) and Web Development. I am passionate software developer who always thrives to work on coding and machine learning related problems and finding sustainable and scalable solution to create impact.
+                        I am also interested in Web Development.
+                        I have a MERN stack developer and also worked on it in some of my projects
+                    </p>
+
+                    <a href="./images/my-cv.pdf" class="btn" target="_blank" download>Download CV</a>
+
+                    <!-- for other details -->
+                    <!-- we need to add some on click events for rendering when we click -->
+                    <!-- <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            Skills
+                        </p>
+
+                        <p class="tab-links" onclick="opentab('experience')">
+                            Experience
+                        </p>
+
+                        <p class="tab-links" onclick="opentab('education')">
+                            Education
+                        </p>
+                    </div>
+
+                    for contents
+                    <div class="tab-contents active-tab" id="skills">
+                        list of skills
+                        <ul>
+                            <li>
+                                <span>
+                                C
+                                </span>
+                            </li>
+
+                            <li>
+                                <span>
+                                    C++
+                                </span>
+                            </li>
+
+                            <li>
+                                <span>
+                                    Java
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    for education
+                    <div class="tab-contents" id="experience">
+                        list of skills
+                        <ul>
+                            <li>
+                                <span>
+                                C1
+                                </span>
+                            </li>
+
+                            <li>
+                                <span>
+                                    C++
+                                </span>
+                            </li>
+
+                            <li>
+                                <span>
+                                    Java
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    for experince
+                    <div class="tab-contents" id="education">
+                        list of skills
+                        <ul>
+                            <li>
+                                <span>
+                                C2
+                                </span>
+                            </li>
+
+                            <li>
+                                <span>
+                                    C++
+                                </span>
+                            </li>
+
+                            <li>
+                                <span>
+                                    Java
+                                </span>
+                            </li>
+                        </ul>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------- services ------------->
+    <div id="services">
+        <div class="container">
+            <h1 class= "subtitle"> My Education</h1>
+            <!-- services list -->
+            <div class="services-list">
+                <div>
+                    <!-- this is icon -->
+                    <i class="fa-solid fa-code"></i>
+                    <h2>College</h2>
+                    <p>
+                        College : Bakhtiyarpur College of Engineering, Patna (Bihar)<br>
+                        Stream : Computer Science and Engineering<br>
+                        Batch : 2020-2024<br>
+                        CGPA : 9.25/10 (till 4th sem)
+                    </p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+
+                <div>
+                    <!-- icons -->
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Class 12</h2>
+                    <!-- content -->
+                    <p>
+                        School : N.E.Railway Inter College, Garhara (Bihar) <br>
+                        Stream : Science (PCM) <br>
+                        Batch : 2017-2019 <br>
+                        Percentage : 75%
+                    </p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+
+                <div>
+                    <!-- icons -->
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <!-- content -->
+                    <h2>Class 10</h2>
+                    <p>
+                        School : St Joseph's School, Jhajha (Bihar) <br>
+                        Stream : Science  <br>
+                        Batch : 2016-2017 <br>
+                        Percentage : 88%
+                    </p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------- for portfolio ----------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle"> My Work </h1>
+            <!-- works -->
+            <div class="work-list">
+                <!-- work1 -->
+                <div class="work">
+                    <img src="./images/work-1.png" alt="work">
+                    <div class="layer">
+                        <!-- project -->
+                        <h3> Banking System </h3>
+                        <p>
+                            Made a Banking System That can Detect and Recognize your wallet using Machine Learning
+                        </p>
+                        <!-- link for the project -->
+                        <a href="https://github.com/sanjeevbcep/spark-foundation" target="_blank">
+                            <!-- icon in this used -->
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+
+                        <a href="https://github.com/sanjeevbcep/spark-foundation" target="_blank">
+                            <!-- icon in this used -->
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- work2 -->
+                <div class="work">
+                    <img src="./images/work-2.png" alt="work">
+                    <div class="layer">
+                        <!-- project -->
+                        <h3>Doctor Tribute Web Page</h3>
+                        <p>
+                            Made a Tribute Web Page using Html CSS with beautiful web layout
+                        </p>
+                        <!-- link for the project -->
+                        <a href="https://arin2002.github.io/thanking-doctor-site/" target="_blank">
+                            <!-- icon in this used -->
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+
+                        <a href="https://github.com/arin2002/thanking-doctor-site" target="_blank">
+                            <!-- icon in this used -->
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- work3 -->
+                <div class="work">
+                    <img src="./images/work-3.png" alt="work">
+                    <div class="layer">
+                        <!-- project -->
+                        <h3>Face Mask Detector</h3>
+                        <p>
+                            Made a Face Mask Detector which can Detect the mask using webcam, which I made to contribute to society during
+                            covid days using Deep Learning.
+                        </p>
+                        <!-- link for the project -->
+                        <a href="#" target="_blank">
+                            <!-- icon in this used -->
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+
+                        <a href="#" target="_blank">
+                            <!-- icon in this used -->
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- icon here one -->
+            <a href="https://github.com/sanjeevbcep" target="_blank" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-------------- contact form --------- -->
+
+    <div id="contact">
+        <!-- we will show contents in 2 colums -->
+        <div class="container">
+            <div class="row">
+                <!-- first one all links -->
+                <div class="contact-left">
+                    <h2 class="subtitle">Contact Me</h2>
+                    <!-- name -->
+                    <p>
+                        <!-- icon added of plane -->
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Sanjeev kumar
+                    </p>
+                    <!-- email id -->
+                    <p>
+                        <!-- icon added of plane -->
+                        <i class="fa-solid fa-paper-plane"></i>
+                        sanjeevbcep@gmail.com
+                    </p>
+                    <!-- phone -->
+                    <!-- <p> -->
+                        <!-- icon -->
+                        <!-- <i class="fa-solid fa-phone"></i>
+                        32141423
+                    </p> -->
+
+                    <p>
+                        <!-- icon added of plane -->
+                        <i class="fa-solid fa-house"></i>
+                        Patna (Bihar), India
+                    </p>
+
+                    <!-- social media icons -->
+                    <div class="social-icons">
+                        <!-- link1 -->
+                        <a href="https://www.linkedin.com/in/arin-agarwal-0757b922a/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <!-- link2 -->
+                        <a href="https://github.com/arin2002" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <!-- link3 -->
+                        <a href="https://leetcode.com/arin2002/" target="_blank">
+                            <iconify-icon icon="simple-icons:leetcode"></iconify-icon>
+                        </a>
+                        <!-- link4 -->
+                        <a href="https://www.codechef.com/users/arinagg2002" target="_blank">
+                            <iconify-icon icon="simple-icons:codechef"></iconify-icon>
+                        </a>
+                        <!-- link5 -->
+                        <a href="https://www.instagram.com/_arin_agarwal/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <!-- for CV -->
+                    <!-- download jisse download ho sakhe -->
+                    <a href="./images/my-cv.pdf" class="btn btn2 resume" target="_blank" download>Download CV</a>
+                </div>
+                <!-- 2nd one  form -->
+                <div class="contact-right">
+                    <!-- create a form -->
+                    <form name="submit-to-google-sheet">
+                        <!-- for name -->
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <!-- email -->
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <!-- for message -->
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <!-- for submiting -->
+                        <button type="submit" class="btn btn2 resume">Submit</button>
+                    </form>
+                    <!-- for confiramtion ki hamra send ho gaya h form mai -->
+                    <span id="msg">                
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <!------ botton section copyright --- -->
+        <div class="copyright">
+            <p>copyright <i class="fa-solid fa-copyright"></i> Sanjeev Made with <i class="fa-sharp fa-solid fa-heart icon"></i> by <a href="https://www.linkedin.com/in/sanjeev-kumar-2b24a8202/"> Sanjeev kumar</a></p>
+        </div>
+    </div>
+
+    <!-- for javascript -->
+    <script src="css/index.js"></script>
+</body>
+</html>

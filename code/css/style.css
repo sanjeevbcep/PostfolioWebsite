@@ -1,0 +1,674 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* box sizing aagar pading vagera du to change ho jaati h total width
+    But this fix our problem */
+    box-sizing: border-box;
+}
+
+/* help us in navingation to different portion in our web page kaise scrool hoga batyage ye */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+/* header for image */
+#header{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(./images/portfolio_theme.png); */
+    /* cover kya karti h pura cover kar legi uss div vagera ko */
+    background-size: cover;
+    background-position: center;
+}
+
+/* for some spacing between body and links */
+.container{
+    padding: 10px 10%;
+}
+
+/* so that image and logo can be side and side */
+nav{
+    display: flex;
+    align-items: center;
+    /* space de deta h items ke bech mai */
+    /* aur pehli aur last wali end mai chali jaati h */
+    justify-content: space-between;
+    /* overflow rokne ke liye ha ye aagar width vagera hio jaye change apni */
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 9999;
+    width: 85%;
+    background-color: #080808;
+}
+
+/* for logo */
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    /* for making horizontal */
+    display: inline-block;
+    /* shortand h ye list mai image dene ke liye*/
+    list-style: none;
+    margin: 10px 20px;
+}
+
+/* for removing link colors of nav bar */
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    /* font-size: 18px; */
+    font-size: 22px;
+    position: relative;
+    transition: color 0.5s;
+}
+
+/* adding hover affect */
+
+/* after matlb iske just next child pe */
+/* cant be used without content */
+nav ul li a::after{
+    content: '';
+    /* 0 isliye jisse line hide kar sakhe */
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+/* hover karne pe he after chale */
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav ul li a:hover{
+    color:#61b752;
+}
+
+/* for header text styles */
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+/* for name color */
+.header-text h1 span{
+    color: #ff004f;
+}
+
+
+/* -------------for about------------- */
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    /* side  by side */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    /* it means width of column will be 35% */
+    flex-basis: 35%;
+}
+
+/* for img */
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+/* added by me */
+.aboutme{
+    font-size: 18px;
+    margin-top: 10%;
+}
+
+/* about me ke liye text wala heading */
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* now for deatils in about education vagera */
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+/* for animation */
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links:hover::after{
+    width: 100%;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+/* for skills */
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+/* for differnt tabs rendering */
+.tab-contents{
+    /* sabh content hide kar diya abhi kuch render nhi karna */
+    display: none;
+}
+
+.tab-contents.active-tab{
+    /* now it will show */
+    display: block;
+}
+
+/* ------------- for services ------------- */
+
+#services{
+    padding: 30px 0;
+}
+
+.services-list{
+    display: grid;
+    /* 1 fr matlb 1 column bahar widtgh ka banega */
+
+    /* repeat ka matlb ha ki baar baar linke ki jrrut nhi h ek bar likho jitne chaiye column ka width aur phir width */
+    /* min max mai 2 value deni padhegi 1 minumum aur ek max*/
+    /* responsiveness badhata h ye */
+
+    /* auto fit kya karta h jitne columns le rahe h jagye utne kar deta space nhi rakhta dusro ke liye */
+    /* aapne aap ajust kar lega vo sabh */
+    /* auto adjust hp jayega according to width and grid ka width utna ho jayega jitma aapna cell le raha ha*/
+    /* responsive bana dega */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* gap between rows and coumn */
+    /* cards bana rahe h na isliye chaiye */
+    grid-gap: 40px;
+    margin-top: 50px ;
+}
+
+/* styling for contents and cards */
+/* card ko aalg dikhane ke liye aur background dene ke liye and some spacing */
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    /* isse kya hoga ki hover karne par ekdum affect nhi aayega time lene pe aayega*/
+    transition: background 0.5s, transform 0.5s;
+}
+
+/* icons size increase ke liye */
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+/* for titles and link in that */
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* link */
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    /* line mai bhe rahe vo aur block jaisa bhe kaam kare mtlb width de sakhta hu vagera vagera*/
+    display: inline-block;
+}
+
+/* adding hover affect on our cards now */
+.services-list div:hover{
+    background: #ff004f;
+    /* ye kya karega ki move kar dega upar -10px se */
+    transform: translateY(-10px);
+}
+
+/* --------- portfolio section ----------- */
+
+#portfolio{
+    padding: 50px 0;
+}
+
+/* now again we are going to use grid layout */
+/* same css used like for services */
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px ;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    /* animation */
+    transition: transform 0.5s;
+}
+
+/* now on img hame text aur link aana chaiye img ke upar uske liye */
+.layer{
+    width: 100%;
+    /* height: 100%; */
+    /* for hiding done */
+    height: 0;
+    /* black with 60% opacity */
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    /* this piece of code is for making my text show inside the image */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* if text overflows it hides */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /*ustify-content property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container.
+    */
+    justify-content: center;
+    /* coulm wise ho jayenge */
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    /* animation */
+    transition: height 0.5s;
+}
+/* changing font size and decorating icon */
+.layer h3{
+    /* font-weight: bolder; */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* styling link in this */
+.layer a{
+    /* margin-top: 20px; */
+    margin-top: 30px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    /* space between lines */
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.layer a:hover{
+    background-color:#080808;
+}
+
+/* by default hide honge aur click hone pe show honge content */
+.work:hover img{
+    /* jabh bhe hover kare img mai size increase ho */
+    transform: scale(1.1);
+}
+
+/* display content */
+.work:hover .layer{
+    height: 100%;
+}
+
+/* for button see more */
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+/* hover affect on btn */
+.btn:hover{
+    background: #ff004f;
+}
+
+/* --------contact form and link section ------- */
+
+/* left portion css */
+.contact-left{
+    /* for the left side */
+    /* matlb ye max width ki tare ha */
+    /* bas kya h ki aagr flex items pe use hoti h ye */
+    /* jabh tak itni reh sakhe ye rahegi but aagr nhi ho sakhti to shrink karegi */
+    /* just like max-width bas ye flex item pe h */
+    flex-basis: 35%;
+}
+
+/* right side */
+.contact-right{
+    /* for the left side */
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+/* styling icons in this setion */
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+/* adding hover effects on these icons */
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+/* for resume cv button styling left mai lane ke liye */
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+/* right side css */
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    /* isse niche ho gaye saare */
+    width: 100%;
+    /* border removed */
+    border: 0;
+    /* outline same as border */
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    /* rounds corner of border */
+    border-radius: 6px;
+}
+/* decreasing space betwwen form and the button */
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* -------copyright ------------- */
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright .icon{
+    color: red;
+}
+
+/* ---------------- media queries -------------- */
+/* screen isliye batna padhta h kis ke liye likh rahe ha ham css */
+
+/* hidden bcz bas choti screen mai dikhana h */
+nav .media{
+    display: none;
+}
+
+/* styling of confirmation */
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+/* instead of image we used name here */
+.logo1{
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.text{
+    font-size: 40px;
+}
+
+.auto{
+    color: #61b752;
+}
+
+.btn.btn2.btn3{
+    cursor: pointer;
+}
+
+.btn.btn2.btn3 a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.btn.btn2.btn3:hover{
+    opacity: 0.8;
+}
+
+/* scroll up */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.resume:hover{
+    opacity: 0.8;
+}
+
+/* --------------media queries -------------------- */
+@media only screen and (max-width: 600px) {
+    /* changing background */
+    /* #header{
+        background-image: url(./images/phone-background.png);
+    } */
+    /* decreaing size in main section */
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    /* now showing */
+    nav .media{
+        display: block;
+        font-size: 25px;
+    }
+
+    /* upar le aayega ye menu ko */
+    /* horizontal mai */
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        /* right: 0; */
+        /* done for hiding */
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        /* basically 2 divs hote h to upar lane ke liye use karte h iska divs ko*/
+        z-index: 2;
+        /* animation */
+        transition: right 0.5s;
+    }
+    /* perfectly arranged */
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    /* cross will come at right place */
+    nav ul .media{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    /*-------- about me section ----------- */
+    .subtitle{
+        /* reduce size */
+        font-size: 40px;
+    }
+
+    .about-col-1,.about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+
+    .about-col-2{
+        font-size: 14px;
+    }
+
+    /* eduction skills vagera ko adjust */
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    /* last section form wala */
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    /* copyright size decrease */
+    .copyright{
+        font-size: 14px;
+    }
+
+
+    /* these are added for new css */
+    .btn.btn2.btn3 a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .text{
+        font-weight: bolder;
+        font-size: 25px;
+    }
+
+    .logo1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .aboutme{
+        margin-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .aboutme{
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}
