@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI INDEX</title>
+    <style>
+        body{
+            margin:auto;
+            padding: 15px;
+            background-image: url("img/8549530.jpg");
+            background-repeat: no-repeat;
+            /* background-position: right top; */
+            background-color: lightblue;
+            text-align: center;
+        }
+        h1{
+            color: rgb(13, 5, 94);
+        }
+        h2{
+            /* color:red; */
+            /* background:url(); */
+        }
+        footer {
+  text-align:  center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+        
+    </style>
+</head>
+<body>
+    
+    
+       <h1> 
+        BMI INDEX
+       </h1> 
+
+       <h2>
+        <form id="bmiForm" class="bmi-form">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" required>
+        <br>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" required>
+        <br>
+        <button type="submit">Calculate BMI</button>
+        </form>
+     </h2>
+    <div id="result" class="result"></div>
+
+    <footer>
+        <p color: black>&copy; <a href="https://www.linkedin.com/in/sanjeev-kumar-2b24a8202/">Nirvana Fitness</a>. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('bmiForm');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value);
+
+        if (isNaN(weight) || isNaN(height)) {
+            resultDiv.textContent = 'Please enter valid weight and height values.';
+            return;
+        }
+
+        const bmi = calculateBMI(weight, height);
+        const category = getBMICategory(bmi);
+
+        resultDiv.textContent = `Your BMI: ${bmi.toFixed(2)} (${category})`;
+    });
+
+    function calculateBMI(weight, height) {
+        const heightInMeters = height / 100;
+        return weight / (heightInMeters * heightInMeters);
+    }
+
+    function getBMICategory(bmi) {
+        if (bmi < 18.5) {
+            return 'Underweight';
+        } else if (bmi < 24.9) {
+            return 'Normal weight';
+        } else if (bmi < 29.9) {
+            return 'Overweight';
+        } else {
+            return 'Obese';
+        }
+    }
+});
+
+    </script>
+</body>
+</html>
