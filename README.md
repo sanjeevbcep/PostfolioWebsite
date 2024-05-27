@@ -1,2 +1,3 @@
 # PostfolioWebsite
-https://sanjeev.engineer/
+https://sanjeev.digital/
+https://sanjeevbcep.github.io/PostfolioWebsite/
